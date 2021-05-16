@@ -1,3 +1,16 @@
+terraform {
+      backend "remote" {
+        # The name of your Terraform Cloud organization.
+        organization = "hamtaro702"
+
+        # The name of the Terraform Cloud workspace to store Terraform state files in.
+        workspaces {
+          name = "Terraform-huawei"
+        }
+      }
+    }
+
+
 provider "huaweicloud" {
   region     = "ap-southeast-2"
   access_key = "U3VVWQHSNWBKT2LWDAEE"
