@@ -9,6 +9,7 @@ terraform {
     
     workspaces {
       name = "Terraform-Huawei-Server"
+      
     }
   }
 }
