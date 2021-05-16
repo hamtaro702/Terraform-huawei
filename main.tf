@@ -34,15 +34,16 @@ data "huaweicloud_images_image" "myimage" {
   most_recent = true
 }
 
-resource "random_password" "password" {
-  length           = 16
-  special          = true
-  override_special = "!@#$%*"
-}
+# resource "random_password" "password" {
+#   length           = 16
+#   special          = true
+#   override_special = "!@#$%*"
+# }
 
 resource "huaweicloud_compute_instance" "basic" {
   name              = "basic"
-  admin_pass        = random_password.password.result
+#   admin_pass        = random_password.password.result
+  admin_pass        = "admin8v,ru"
   image_id          = data.huaweicloud_images_image.myimage.id
   flavor_id         = data.huaweicloud_compute_flavors.myflavor.ids[0]
   security_groups   = ["default"]
