@@ -1,7 +1,12 @@
 terraform {
+
+
   backend "remote" {
     organization = "hamtaro702"
 
+
+    hostname = "app.terraform.io"
+    
     workspaces {
       name = "Terraform-Huawei-Server"
     }
