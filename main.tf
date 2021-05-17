@@ -1,12 +1,17 @@
-terraform {
-  backend "remote" {
-    organization = "hamtaro702"
+# terraform {
+#   backend "remote" {
+#     organization = "hamtaro702"
 
-    workspaces {
-      name = "Terraform-Huawei-Server"
-    }
-  }
+#     workspaces {
+#       name = "Terraform-Huawei-Server"
+#     }
+#   }
+# }
+
+terraform {
+  backend "http" { }
 }
+
 provider "huaweicloud" {
   region     = "ap-southeast-2"
   access_key = "U3VVWQHSNWBKT2LWDAEE"
