@@ -7,7 +7,6 @@ terraform {
     }
   }
 }
-
 provider "huaweicloud" {
   region     = "ap-southeast-2"
   access_key = "U3VVWQHSNWBKT2LWDAEE"
